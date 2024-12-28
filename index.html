@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(58, 58, 250);
+           
+        }
+
+        .main-table {
+            height: 300px;
+            width: 30%;
+            margin: 40px 0px 0px 450px;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: white;
+        }
+
+        .head {
+            text-align: center;
+            color: black;
+
+        }
+
+        .form {
+            display: flex;
+            justify-content: center;
+        }
+
+        .row {
+            height: 30px;
+        }
+
+        .data {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            outline: none;
+            border: none;
+            background-color: transparent;
+        }
+
+        .table2 {
+            width: 50%;
+            margin: 40px 0px 0px 300px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .delete{
+            background-color: red;
+        }
+
+       
+    </style>
+
+    <div class="main-table">
+        <h1 class="head">Student form Task</h1>
+        <form class="form">
+            <table border="1" class="table">
+                <tr class="row">
+                    <td class="data">Name</td>
+                    <td>
+                        <input type="text" id="inputName"> 
+                    </td>
+
+                </tr>
+                <tr class="row">
+                    <td class="data">Age</td>
+                    <td><input type="text" id="inputAge"></td>
+                </tr>
+                <tr class="row">
+                    <td class="data">Gender</td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="Male">Male
+                        <input type="radio" id="female" name="gender" value="Female">Female
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td class="data">Course</td>
+                    <td>
+                        <select id="courseList" style="box-sizing: border-box; width: 100%; padding: 2px;">
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="React">ReactJs</option>
+                            <option value="Java">Flutter</option>
+                            <option value="Python">Python</option>
+                            <option value="SQL">Nodejs</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td class="data">Email</td>
+                    <td><input type="email" id="email"></td>
+                </tr>
+                <tr class="row" style="background-color: rgb(58, 248, 58); cursor: pointer;">
+                    <td class="data" colspan="2" id="save">Save</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div class="table2">
+        <h1 class="head">Students Data</h1>
+        <form id="forms" style="display: flex; justify-content: center;">
+            <table border="1" id="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Course</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
